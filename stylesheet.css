@@ -1,0 +1,52 @@
+.chx-main {
+	background-color: rgba(255, 182, 193, 0.2);
+}
+
+.chx-main-2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.chx-main-3 {
+	background-color: rgba(255,255,255,1);
+	padding-top: 10px;
+	text-align: center;
+}
+
+.chx-2 {
+	text-align: center;
+}
+
+.chx-3 {
+	text-align: center;
+}
+
+.bld {
+	font-weight: bold;
+}
+
+.chx-jmb {
+	margin-left: 0;
+	margin-left: 0;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 0;s
+}
+
+h4 , h5, h3 {
+    display: block;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.gp {
+	margin-bottom: 1.7px;
+}
+
+.gp-2 {
+	margin-bottom: 10px;
+}
