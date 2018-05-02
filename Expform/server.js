@@ -4,27 +4,34 @@ const app = express();
 const bodyParser= require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://tej:tej@ds111420.mlab.com:11420/kart";
+var mongoose = require('mongoose');
+var mongoDB = "mongodb://tej:tej@ds111420.mlab.com:11420/kart";
+//var MongoClient = require('mongodb').MongoClient;
+//var url = "mongodb://tej:tej@ds111420.mlab.com:11420/kart";
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
 
-var dbo;
+//var dbo;
 
 app.listen(3000, function() {
   console.log('listening on 3000')
 });
 
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var dbo = mongoose.connection;
+dbo.on('error', console.error.bind(console, 'MongoDB connection error:'));
+dbo.createCollection('kart', function(err, collection) {});
 
-MongoClient.connect(url, function(err, db){
+/*MongoClient.connect(url, function(err, db){
 	if(!err)
 	{
 		dbo = db.db("kart");
 		console.log('Database Created!');
 		dbo.createCollection('kart', function(err, collection) {});
 	}	
-});
+});*/
 
 app.get('/', (req, res) => {
   dbo.collection('kart').find().toArray((err, result) => {
