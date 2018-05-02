@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	<form action="/" method="POST">
+    <label for="item_name">Item: </label>
+    <input id="item_name" type="text" name="name_field" value="Item Name">
+    <br>
+    <label for="des_name">Description: </label>
+    <input id="des_name" type="text" name="des_field" value="Item Description">
+    <input type="submit" value="Register">
+
+</form>
+
+<ul>
+  <% for(var i=0; i<kart.length; i++) {%>
+    <li>
+      <span><%= kart[i].name_field %></span>
+      <span><%= kart[i].des_field %></span>
+    </li>
+  <% } %>
+</ul>
+
+</body>
+</html>
